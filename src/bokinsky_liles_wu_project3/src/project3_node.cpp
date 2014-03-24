@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 
         // Publish wifi signal strength to /wifi_ss topic
         msg.data = std::atoi(buff);
-        ROS_INFO_STREAM("Sending value " << msg.data << " to wifi_ss");
+//        ROS_INFO_STREAM("Sending value " << msg.data << " to wifi_ss");
         wifi_reporter.publish(msg);
 
         rate.sleep();

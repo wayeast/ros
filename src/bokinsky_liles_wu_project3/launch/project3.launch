@@ -7,6 +7,7 @@
     pkg="create_node"
     type="turtlebot_node.py"
     name="turtlebot_node"
+    output="screen"
   />
 
   <!-- ***************************************************
@@ -129,7 +130,6 @@
     pkg="bokinsky_liles_wu_project3"
     type="project3_node"
     name="wifi_reporter"
-    output="screen"
    />
 
 </launch>
