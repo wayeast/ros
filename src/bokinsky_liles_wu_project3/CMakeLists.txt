@@ -7,6 +7,8 @@ project(bokinsky_liles_wu_project3)
 find_package(catkin REQUIRED COMPONENTS
    roscpp
    std_msgs
+   create_node
+   diagnostic_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -101,16 +103,19 @@ include_directories(include
 # )
 
 ## Declare a cpp executable
-add_executable(project3_node src/project3_node.cpp)
+add_executable(report_batt_wifi src/report_batt_wifi.cpp)
+add_executable(sensor_info      src/sensor_info.cpp)
+add_executable(wifi_mon         src/wifi_mon.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(bokinsky_liles_wu_project3_node bokinsky_liles_wu_project3_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(project3_node
-  ${catkin_LIBRARIES}
-)
+target_link_libraries(report_batt_wifi  ${catkin_LIBRARIES})
+target_link_libraries(sensor_info  ${catkin_LIBRARIES})
+target_link_libraries(wifi_mon  ${catkin_LIBRARIES})
+
 
 #############
 ## Install ##
@@ -127,11 +132,14 @@ target_link_libraries(project3_node
 # )
 
 ## Mark executables and/or libraries for installation
- install(TARGETS project3_node
+# install(TARGETS 
+#     report_batt_wifi
+#     sensor_info
+#     wifi_mon
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
- )
+#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
@@ -141,11 +149,11 @@ target_link_libraries(project3_node
 # )
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
-install(DIRECTORY launch/
+#install(DIRECTORY launch/
 #   # myfile1
 #   # myfile2
-   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
- )
+#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+# )
 
 #############
 ## Testing ##

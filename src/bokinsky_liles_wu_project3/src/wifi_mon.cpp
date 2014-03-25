@@ -11,10 +11,10 @@ int main(int argc, char **argv)
     // Basic ROS environment setup
     ros::init(argc, argv, "publish_wifi_strength");
     ros::NodeHandle nh;
-    ros::Publisher wifi_reporter = nh.advertise<std_msgs::Int32>(
-            "wifi_ss", 100);
+    ros::Publisher wifi_mon = nh.advertise<std_msgs::Int32>(
+            "wifi_ss", 1);
     std_msgs::Int32 msg;
-    ros::Rate rate(2);
+    //ros::Rate rate(2);
 
     FILE *in;
     char buff[256];
@@ -29,8 +29,8 @@ int main(int argc, char **argv)
         // Publish wifi signal strength to /wifi_ss topic
         msg.data = std::atoi(buff);
 //        ROS_INFO_STREAM("Sending value " << msg.data << " to wifi_ss");
-        wifi_reporter.publish(msg);
+        wifi_mon.publish(msg);
 
-        rate.sleep();
+        //rate.sleep();
     }
 }

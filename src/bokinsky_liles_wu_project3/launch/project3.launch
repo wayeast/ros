@@ -7,7 +7,6 @@
     pkg="create_node"
     type="turtlebot_node.py"
     name="turtlebot_node"
-    output="screen"
   />
 
   <!-- ***************************************************
@@ -126,10 +125,29 @@
     <remap from="image" to="camera/depth/image_raw"/>
   </node>
 
+  <!-- ******************************************************
+        Launch wifi signal strength monitor
+       ******************************************************
+   -->
+<!--
   <node
     pkg="bokinsky_liles_wu_project3"
-    type="project3_node"
-    name="wifi_reporter"
+    type="report_batt_wifi"
+    name="batt_wifi_reporter"
+    output="screen"
+   />
+  <node
+    pkg="bokinsky_liles_wu_project3"
+    type="sensor_info"
+    name="report_sensor_info"
+    output="screen"
+   />
+-->
+
+  <node
+    pkg="bokinsky_liles_wu_project3"
+    type="wifi_mon"
+    name="publish_wifi_ss"
    />
 
 </launch>
