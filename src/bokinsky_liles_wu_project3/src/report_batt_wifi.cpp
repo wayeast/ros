@@ -1,3 +1,21 @@
+/**************************************************
+ * Name:         Huston Bokinsky
+ *               Karina Liles
+ *               Xian Wu
+ * File:         report_batt_wifi.cpp
+ * Assignment:   Project 3 - Turtlebot Setup
+ * Date:         25 March, 2014
+ * Course:       CSCE 574 - Robotics
+ * Instructor:   Dr. O'Kane
+ * Description:  Set up basic connections and functionality for 
+ *               our turtlebot robots. Create basic launch file; 
+ *               get wifi signal strength from robot's netbook; 
+ *               monitor and print robot's diagnostic messages, 
+ *               battery charge, and wifi strength; control robot 
+ *               via network connection from lab workstation. 
+ * 
+ **************************************************/
+
 // ROS includes
 #include <ros/ros.h>
 #include <std_msgs/Int32.h>

@@ -1,3 +1,23 @@
+<!--
+    *********************************************
+     Name:         Huston Bokinsky
+                   Karina Liles
+                   Xian Wu
+     File:         diagnostic_watch.launch
+     Assignment:   Project 3 - Turtlebot Setup
+     Date:         25 March, 2014
+     Course:       CSCE 574 - Robotics
+     Instructor:   Dr. O'Kane
+     Description:  Set up basic connections and functionality for 
+                   our turtlebot robots. Create basic launch file; 
+                   get wifi signal strength from robot's netbook; 
+                   monitor and print robot's diagnostic messages, 
+                   battery charge, and wifi strength; control robot 
+                   via network connection from lab workstation. 
+     
+    *********************************************
+  -->
+
 <launch>
   <node
     pkg="bokinsky_liles_wu_project3"
@@ -13,4 +33,3 @@
     output="screen"
    />
 </launch>
-
