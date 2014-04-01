@@ -28,19 +28,19 @@
 void getSensorInfo(const create_node::TurtlebotSensorState& msg)
 {
     uint8_t mask = 1;
-    if (mask & msg.bumps_wheeldrops == 1)
+    if (mask & msg.bumps_wheeldrops)
         ROS_INFO_STREAM("Bump right.");
-    mask << 1;
-    if (mask & msg.bumps_wheeldrops == 2)
+    mask <<= 1;
+    if (mask & msg.bumps_wheeldrops)
         ROS_INFO_STREAM("Bump left.");
-    mask << 1;
-    if (mask & msg.bumps_wheeldrops == 4)
+    mask <<= 1;
+    if (mask & msg.bumps_wheeldrops)
         ROS_INFO_STREAM("Wheel drop right.");
-    mask << 1;
-    if (mask & msg.bumps_wheeldrops == 8)
+    mask <<= 1;
+    if (mask & msg.bumps_wheeldrops)
         ROS_INFO_STREAM("Wheel drop left.");
-    mask << 1;
-    if (mask & msg.bumps_wheeldrops == 16)
+    mask <<= 1;
+    if (mask & msg.bumps_wheeldrops)
         ROS_INFO_STREAM("Wheel drop caster.");
 }
 
