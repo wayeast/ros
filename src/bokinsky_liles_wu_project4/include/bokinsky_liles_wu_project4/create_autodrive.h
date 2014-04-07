@@ -2,6 +2,7 @@
 #define CREATE_AUTODRIVE_H
 
 #include <cmath>
+#include <ros/ros.h>
 #include <sensor_msgs/LaserScan.h>
 
 
@@ -11,6 +12,7 @@ namespace create_autodrive
     const float SAFE_DIST = 0.75;  // min distance to nearest obstacle to allow forward motion
     const float FULL_SPEED = 2.0;  // robot full speed forward
     const float FUDGE_FACTOR = 0.01;  // accounting for imprecise laserscan readings
+    const float THETA_SCALAR = 3.0;  // scalar to make angular adjustments quicker
 
     // space representation structure
     struct create_autodrive_space

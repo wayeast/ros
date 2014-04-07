@@ -15,6 +15,7 @@ Project4Env::Project4Env(ros::NodeHandle* nh)
 void
 Project4Env::sub_callback(const sensor_msgs::LaserScan& msg)
 {
+    //ROS_INFO_STREAM("in sub_callback, received laserscan " << msg.header.seq);
     struct create_autodrive::create_autodrive_space s = 
         create_autodrive::find_drive_space(msg);
     geometry_msgs::Twist pub_msg;

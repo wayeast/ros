@@ -26,7 +26,8 @@ create_autodrive::select_linear_vel(struct create_autodrive::create_autodrive_sp
 float
 create_autodrive::select_angular_vel(struct create_autodrive::create_autodrive_space s)
 {
-    return ((s.left_border_theta * s.left_border_dist) +
+    return create_autodrive::THETA_SCALAR *
+           ((s.left_border_theta * s.left_border_dist) +
             (s.right_border_theta * s.right_border_dist)) /
            (s.left_border_dist + s.right_border_dist);
 }
@@ -39,7 +40,9 @@ create_autodrive::select_angular_vel(struct create_autodrive::create_autodrive_s
 create_autodrive::create_autodrive_space
 create_autodrive::find_drive_space(const sensor_msgs::LaserScan& msg)
 {
+    //ROS_INFO_STREAM("in find_drive_space, creating candidate vector");
     std::vector<create_autodrive::create_autodrive_space> candidates;
+    //ROS_INFO_STREAM("in find_drive_space, creating first candidate space");
     create_autodrive::create_autodrive_space curr_space;
     float curr_range = fill_nan(msg.ranges[0], msg.ranges[1], msg.ranges[1], msg.range_max);
     float nearest_obstacle_distance = curr_range;
@@ -87,10 +90,20 @@ create_autodrive::find_drive_space(const sensor_msgs::LaserScan& msg)
     curr_space.left_border_theta = msg.angle_max;
     curr_space.left_border_dist = curr_range;
     candidates.push_back(curr_space);
+    //ROS_INFO_STREAM("in find_drive_space, successfully completed candidate vector");
 
     // find space with largest max range -> biggest size
+    create_autodrive::create_autodrive_space ret = candidates[0];
+    for (int i=1; i<candidates.size(); i++)
+    {
+        if (candidates[i].top_range > ret.top_range)
+            ret = candidates[i];
+        else if (candidates[i].top_range && candidates[i].size > ret.size)
+            ret = candidates[i];
+    }
+    /*
     std::vector<create_autodrive_space>::iterator It = candidates.begin();
-    create_autodrive_space ret = *It;
+    create_autodrive::create_autodrive_space ret = *It;
     while (It != candidates.end())
     {
         if (It->top_range > ret.top_range)
@@ -98,7 +111,9 @@ create_autodrive::find_drive_space(const sensor_msgs::LaserScan& msg)
         else if (It->top_range == ret.top_range && It->size > ret.size)
             ret = *It;
     }
+    */
 
+    //ROS_INFO_STREAM("in find_drive_space, returning drive space");
     // fill in nearest_obstacle_distance
     ret.nearest_obstacle_distance = nearest_obstacle_distance;
 
