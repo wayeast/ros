@@ -3,17 +3,14 @@
      Name:         Huston Bokinsky
                    Karina Liles
                    Xian Wu
-     File:         project3.launch
-     Assignment:   Project 3 - Turtlebot Setup
-     Date:         25 March, 2014
+     File:         project4.launch
+     Assignment:   Project 4 -- create autodrive
+     Date:         10 April, 2014
      Course:       CSCE 574 - Robotics
      Instructor:   Dr. O'Kane
-     Description:  Set up basic connections and functionality for 
-                   our turtlebot robots. Create basic launch file; 
-                   get wifi signal strength from robot's netbook; 
-                   monitor and print robot's diagnostic messages, 
-                   battery charge, and wifi strength; control robot 
-                   via network connection from lab workstation. 
+     Description:  Have iRobot interact with its environment 
+                   autonomously by driving safely down middle of a 
+                   passage. 
      
     *********************************************
   -->

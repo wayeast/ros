@@ -1,7 +1,19 @@
+/**************************************************
+ * Name:         Huston Bokinsky
+ *               Karina Liles
+ *               Xian Wu
+ * File:         project4_env.cpp
+ * Assignment:   Project 4 -- create autodrive
+ * Date:         10 April, 2014
+ * Course:       CSCE 574 - Robotics
+ * Instructor:   Dr. O'Kane
+ * Description:  Have iRobot interact with its environment 
+ *               autonomously by driving safely down middle of a 
+ *               passage. 
+ * 
+ **************************************************/
+
 #include "project4.h"
-
-
-/* Initialize environment */
 Project4Env::Project4Env(ros::NodeHandle* nh)
 {
     sub = nh->subscribe("scan", 100, &Project4Env::sub_callback, this);

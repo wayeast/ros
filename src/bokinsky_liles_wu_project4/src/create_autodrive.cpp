@@ -1,12 +1,19 @@
+/**************************************************
+ * Name:         Huston Bokinsky
+ *               Karina Liles
+ *               Xian Wu
+ * File:         create_autodrive.cpp
+ * Assignment:   Project 4 -- create autodrive
+ * Date:         10 April, 2014
+ * Course:       CSCE 574 - Robotics
+ * Instructor:   Dr. O'Kane
+ * Description:  Have iRobot interact with its environment 
+ *               autonomously by driving safely down middle of a 
+ *               passage. 
+ * 
+ **************************************************/
+
 #include "create_autodrive.h"
-
-
-/*
- * Linear velocity is a function of robot's distance from nearest obstacle.
- * If nearest obstacle is > create_autodrive::SAFE_DIST, robot moves forward
- * at full speed .  Otherwise it moves forward at speed = distance to nearest
- * obstacle.
- */
 float
 create_autodrive::select_linear_vel(struct create_autodrive::create_autodrive_space s)
 {
