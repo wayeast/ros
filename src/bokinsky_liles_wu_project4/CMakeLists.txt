@@ -110,6 +110,10 @@ add_executable(autodrive_create
     src/project4_env.cpp
     src/create_autodrive.cpp
     )
+add_executable(wifi_mon_pr4       src/wifi_mon.cpp)
+add_executable(safe_sensor        src/safe_sensor.cpp)
+add_executable(safe_wifi          src/safe_wifi.cpp)
+
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(bokinsky_liles_wu_project4_node bokinsky_liles_wu_project4_generate_messages_cpp)
@@ -119,6 +123,15 @@ add_executable(autodrive_create
 #   ${catkin_LIBRARIES}
 # )
 target_link_libraries(autodrive_create
+    ${catkin_LIBRARIES}
+    )
+target_link_libraries(wifi_mon_pr4
+    ${catkin_LIBRARIES}
+    )
+target_link_libraries(safe_sensor
+    ${catkin_LIBRARIES}
+    )
+target_link_libraries(safe_wifi
     ${catkin_LIBRARIES}
     )
 
