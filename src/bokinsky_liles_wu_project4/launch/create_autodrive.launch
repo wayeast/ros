@@ -2,30 +2,23 @@
 
   <!-- Start create drive controller -->
   <node
-    pkg=bokinsky_liles_wu_project4
-    type=autodrive_create
-    name=sunday_drive
-   />
-
-  <!-- Start wifi publisher -->
-  <node
-    pkg=bokinsky_liles_wu_project4
-    type=wifi_mon_pr4
-    name=wifi_mon_pr4
+    pkg="bokinsky_liles_wu_project4"
+    type="autodrive_create"
+    name="sunday_drive"
    />
 
   <!-- Start safe wifi monitor -->
   <node
-    pkg=bokinsky_liles_wu_project4
-    type=safe_wifi
-    name=safe_wifi
+    pkg="bokinsky_liles_wu_project4"
+    type="safe_wifi"
+    name="safe_wifi"
    />
 
   <!-- Start safe sensor monitor -->
   <node
-    pkg=bokinsky_liles_wu_project4
-    type=safe_sensor
-    name=safe_sensor
+    pkg="bokinsky_liles_wu_project4"
+    type="safe_sensor"
+    name="safe_sensor"
    />
 
 </launch>

@@ -149,25 +149,11 @@
         Launch wifi signal strength monitor
        ******************************************************
    -->
-<!--
-  <node
-    pkg="bokinsky_liles_wu_project3"
-    type="report_batt_wifi"
-    name="batt_wifi_reporter"
-    output="screen"
-   />
-  <node
-    pkg="bokinsky_liles_wu_project3"
-    type="sensor_info"
-    name="report_sensor_info"
-    output="screen"
-   />
 
   <node
-    pkg="bokinsky_liles_wu_project3"
-    type="wifi_mon"
+    pkg="bokinsky_liles_wu_project4"
+    type="wifi_mon_pr4"
     name="publish_wifi_ss"
    />
--->
 
 </launch>
