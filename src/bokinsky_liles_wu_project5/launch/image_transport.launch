@@ -1,0 +1,9 @@
+<launch>
+  <node
+    name="image_transporter"
+    pkg="bokinsky_liles_wu_project5"
+    type="xport_images"
+    >
+     <param name="image_transport" value="theora" />
+  </node>
+</launch>
