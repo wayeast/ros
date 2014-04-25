@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   image_transport
   roscpp
   sensor_msgs
+  geometry_msgs
   cv_bridge
   std_msgs
 )
