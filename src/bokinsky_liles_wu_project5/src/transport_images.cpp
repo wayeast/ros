@@ -63,8 +63,8 @@ namespace track_image
     {
         cv::Mat imgThresh =cv::Mat(imgHSV.size(), CV_8UC1);
         cv::inRange(imgHSV,
-                cv::Scalar(110, 90, 100),
-                cv::Scalar(120, 160, 255),
+                cv::Scalar(105, 90, 100),
+                cv::Scalar(130, 160, 255),
                 //cv::Scalar(lowerH,lowerS,lowerV),
                 //cv::Scalar(upperH,upperS,upperV),
                 imgThresh);
@@ -103,7 +103,7 @@ namespace follow_blue_tape_road
             return 0.5;
         //double mass = 1.0 - lin_vel;
         //return (targ_col < tot_cols / 2) ? mass : (-1) * mass;
-        return (targ_col < tot_cols / 2) ? 0.2 : -0.2;
+        return (targ_col < tot_cols / 2) ? 0.1 : -0.1;
     }
 
     geometry_msgs::Twist
