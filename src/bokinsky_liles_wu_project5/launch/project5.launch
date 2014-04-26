@@ -3,14 +3,14 @@
      Name:         Huston Bokinsky
                    Karina Liles
                    Xian Wu
-     File:         project4.launch
-     Assignment:   Project 4 -- create autodrive
-     Date:         10 April, 2014
+     File:         project5.launch
+     Assignment:   Project 5 : Follow th eblue tape road
+     Date:         26 April, 2014
      Course:       CSCE 574 - Robotics
      Instructor:   Dr. O'Kane
-     Description:  Have iRobot interact with its environment 
-                   autonomously by driving safely down middle of a 
-                   passage. 
+     Description:  Get robot to follow blue tape line on floor in 
+                   different lighting conditions and with differnt 
+                   shades of blue. 
      
     *********************************************
   -->

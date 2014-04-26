@@ -1,3 +1,20 @@
+<!--
+    *********************************************
+     Name:         Huston Bokinsky
+                   Karina Liles
+                   Xian Wu
+     File:         image_transport.launch
+     Assignment:   Project 5 : Follow th eblue tape road
+     Date:         26 April, 2014
+     Course:       CSCE 574 - Robotics
+     Instructor:   Dr. O'Kane
+     Description:  Get robot to follow blue tape line on floor in 
+                   different lighting conditions and with differnt 
+                   shades of blue. 
+     
+    *********************************************
+  -->
+
 <launch>
   <node
     name="image_transporter"
