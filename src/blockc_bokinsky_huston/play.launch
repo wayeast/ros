@@ -1,0 +1,15 @@
+<launch>
+<node
+pkg="turtlesim"
+type="turtlesim_node"
+name="turtlesim"
+/>
+<node
+pkg="blockc_bokinsky_huston"
+type="blockc_bokinsky_huston"
+name="turtleheeder"
+args="/home/huston/574CSCE/src/blockc_bokinsky_huston/data/blockc.instr"
+launch-prefix="xterm -e"
+/>
+</launch>
+

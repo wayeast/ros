@@ -1,0 +1,32 @@
+<launch>
+  <!--
+    Name:         Huston Bokinsky
+    File:         count.launch
+    Assignment:   count_people_bokinsky
+    Date:         23 February, 2014
+    Course:       CSCE 574 - Robotics
+    Instructor:   Dr. O'Kane
+    Description:  
+    
+   -->
+
+<arg
+     name="bag"
+     default="$(find count_people_bokinsky)/example1.bag"
+   />
+
+  <node
+     pkg="count_people_bokinsky"
+     type="count_people_bokinsky"
+     name="counter"
+     />
+ 
+  <node
+     pkg="rosbag"
+     type="play"
+     name="player"
+     required="true"
+     args="$(find count_people_bokinsky)/$(arg bag)"
+  />
+  
+</launch>

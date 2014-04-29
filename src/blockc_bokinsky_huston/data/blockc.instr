@@ -1,0 +1,100 @@
+#############################################################
+# Name:        Huston Bokinsky
+# Date:        1 February, 2014
+# Assignment:  Project 1  -  Block C
+# Description: Instructions for turtle to follow to describe
+#              a block C pattern.
+#############################################################
+
+############################################################
+# For cut-and-paste convenience
+# --------------------------
+# start X = 5.544444561
+# start Y = 5.544444561
+#
+#  PI     = 3.14159265359
+#  PI / 2 = 1.57079632679
+# 3PI / 2 = 4.71238898038
+#  PI / 4 = 0.78539816339
+# 3PI / 4 = 2.35619449019
+# 5PI / 4 = 3.92699081699
+# 7PI / 4 = 5.49778714378
+
+#############################################################
+# lines are of the form:
+# targX   targY  targZ   velX   velZ
+# -----------------------------------
+# targX = anticipated x-coord
+# targY = anticipated y-coord
+# targZ = anticipated theta
+# velX  = linear velocity to issue while target coord's not reached
+# velZ  = angular velocity to issue while target coord's not reached
+# ###########################################################
+
+# Turtle starts at lower inside left of block C...
+# lower inside horizontal
+7.25  5.545  0.0     0.2   0.0
+
+# left side lower cap
+7.25  5.545  1.5707  0.0   0.1
+7.25  5.845  1.5707  0.2   0.0
+
+# top lower cap
+7.25  5.845  0.0     0.0  -0.1
+7.65  5.845  0.0     0.2   0.0
+
+# right side lower cap
+7.65  5.845 -1.5707  0.0  -0.1
+7.65  5.545 -1.5707  0.2   0.0
+
+# lower right angle
+7.65  5.545 -2.3562  0.0  -0.1
+7.25  5.145 -2.3562  0.2   0.0
+
+# lower outside horizontal
+7.25  5.145 -3.1416  0.0  -0.1
+5.545 5.145 -3.1416  0.2   0.0
+
+# lower left angle
+5.545 5.145 -3.9270  0.0  -0.1
+5.145 5.545 -3.9270  0.2   0.0
+
+# left outside vertical
+5.145 5.545 -4.7124  0.0  -0.1
+5.145 7.45  -4.7124  0.2   0.0
+
+# upper left angle
+5.145 7.45  -5.4978  0.0  -0.1
+5.545 7.85  -5.4978  0.2   0.0
+
+# upper outside horizontal
+5.545 7.85   0.0     0.0  -0.1
+7.25  7.85   0.0     0.2   0.0
+
+# upper right angle
+7.25  7.85  -0.7854  0.0  -0.1
+7.65  7.45  -0.7854  0.2   0.0
+
+# right side upper cap
+7.65  7.45  -1.5708  0.0  -0.1
+7.65  7.15  -1.5708  0.2   0.0
+
+# top upper cap
+7.65  7.15  -3.1416  0.0  -0.1
+7.25  7.15  -3.1416  0.2   0.0
+
+# left side upper cap
+7.25  7.15  -4.7124  0.0  -0.1
+7.25  7.45  -4.7124  0.2   0.0
+
+# upper inside horizontal
+7.25  7.45  -3.1416  0.0   0.1
+5.545 7.45  -3.1416  0.2   0.0
+
+# inside vertical
+5.545 7.45  -1.5708  0.0   0.1
+5.545 5.545 -1.5708  0.2   0.0
+
+# STOP
+0.0   0.0    0.0     0.0   0.0
+
